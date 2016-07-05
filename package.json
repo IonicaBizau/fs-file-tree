@@ -1,0 +1,43 @@
+{
+  "name": "fs-file-tree",
+  "description": "Get a directory file tree as an object.",
+  "keywords": [
+    "fs",
+    "file",
+    "tree",
+    "get",
+    "a",
+    "directory",
+    "as",
+    "an",
+    "object"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "scripts/",
+    "build/",
+    "cli.js",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/fs-file-tree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/fs-file-tree/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/fs-file-tree#readme"
+}
