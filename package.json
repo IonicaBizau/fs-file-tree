@@ -39,5 +39,11 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/fs-file-tree/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/fs-file-tree#readme"
+  "homepage": "https://github.com/IonicaBizau/fs-file-tree#readme",
+  "dependencies": {
+    "bindy": "^1.0.3",
+    "camelo": "^1.1.3",
+    "read-dir-and-stat": "^1.0.0",
+    "same-time": "^2.3.1"
+  }
 }
