@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Get a directory file tree as an object.
 
 #### Params
+
 - **String** `inputPath`: The input path.
 - **Object** `opts`: An object containing the following fields:
  - `camelCase` (Boolean): Convert the file names in camelcase format (to be easily accessible using dot notation).
@@ -16,6 +17,7 @@ Get a directory file tree as an object.
 The sync version.
 
 #### Params
+
 - **String** `inputPath`: The input path.
 - **Object** `opts`: An object containing the following fields:
  - `camelCase` (Boolean): Convert the file names in camelcase format (to be easily accessible using dot notation).
