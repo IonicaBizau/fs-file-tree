@@ -10,7 +10,11 @@
 ## :cloud: Installation
 
 ```sh
-$ npm i --save fs-file-tree
+# Using npm
+npm install --save fs-file-tree
+
+# Using yarn
+yarn add fs-file-tree
 ```
 
 
@@ -64,7 +68,9 @@ There are few ways to get help:
 
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
+
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
 
 
 ## :memo: Documentation
@@ -123,6 +129,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 
  - [`bloggify`](https://github.com/Bloggify/Bloggify) (by Bloggify)—We make publishing easy.
+ - [`bloggify-cli`](https://github.com/Bloggify/Bloggify) (by Bloggify)—We make publishing easy.
  - [`bloggify-flexible-router`](https://github.com/Bloggify/flexible-router#readme) (by Bloggify)—A flexible router for Bloggify apps.
 
 ## :scroll: License
