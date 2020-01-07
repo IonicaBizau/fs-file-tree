@@ -3,9 +3,7 @@
 
 # fs-file-tree
 
- [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/fs-file-tree.svg)](https://www.npmjs.com/package/fs-file-tree) [![Downloads](https://img.shields.io/npm/dt/fs-file-tree.svg)](https://www.npmjs.com/package/fs-file-tree) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
-
-<a href="https://www.buymeacoffee.com/H96WwChMy" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
+ [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/fs-file-tree.svg)](https://www.npmjs.com/package/fs-file-tree) [![Downloads](https://img.shields.io/npm/dt/fs-file-tree.svg)](https://www.npmjs.com/package/fs-file-tree)
 
 > Get a directory file tree as an object.
 
@@ -60,7 +58,15 @@ console.log(fsFileTree.sync(__dirname, { camelCase: true }));
 //    { path: '.../example/index.js',
 //      stat:
 //       {...} } }
+
+// Promise/async-await interface
+(async () => {
+    const tree = await fsFileTree(__dirname)
+    console.log(tree)
+})()
 ```
+
+
 
 
 
@@ -72,6 +78,7 @@ There are few ways to get help:
  2. For bug reports and feature requests, open issues. :bug:
 
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
 
 
 
@@ -128,13 +135,6 @@ However, if you get some profit from this or just want to encourage me to contin
 Thanks! :heart:
 
 
-## :dizzy: Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
-
-
- - [`bloggify`](https://github.com/Bloggify/Bloggify) (by Bloggify)—We make publishing easy.
- - [`bloggify-cli`](https://github.com/Bloggify/Bloggify) (by Bloggify)—We make publishing easy.
- - [`bloggify-flexible-router`](https://github.com/Bloggify/flexible-router#readme) (by Bloggify)—A flexible router for Bloggify apps.
 
 ## :scroll: License
 
