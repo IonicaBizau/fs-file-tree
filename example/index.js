@@ -35,3 +35,9 @@ console.log(fsFileTree.sync(__dirname, { camelCase: true }));
 //    { path: '.../example/index.js',
 //      stat:
 //       {...} } }
+
+// Promise/async-await interface
+(async () => {
+    const tree = await fsFileTree(__dirname)
+    console.log(tree)
+})()

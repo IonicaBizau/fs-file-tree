@@ -43,6 +43,7 @@
   },
   "homepage": "https://github.com/IonicaBizau/fs-file-tree#readme",
   "dependencies": {
+    "assured": "^1.0.14",
     "bindy": "^1.0.3",
     "camelo": "^1.1.3",
     "read-dir-and-stat": "^1.0.0",
