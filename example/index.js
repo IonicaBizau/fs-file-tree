@@ -1,6 +1,6 @@
 "use strict";
 
-const fsFileTree = require("../lib");
+import fsFileTree from "../lib/index.js";
 
 // File tree looks like this:
 // .
@@ -11,8 +11,9 @@ const fsFileTree = require("../lib");
 // │   └── two\ words
 // └── index.js
 
-// The tree object looks like this:
-fsFileTree(__dirname, (err, tree) => {
+// Promise/async-await interface
+(async () => {
+    const tree = await fsFileTree("example/");
     console.log(tree);
     // { a:
     //    { b: { c: {}, 'test.js': [Object] },
@@ -23,21 +24,4 @@ fsFileTree(__dirname, (err, tree) => {
     //    { path: '.../example/index.js',
     //      stat:
     //       {...} } }
-});
-
-console.log(fsFileTree.sync(__dirname, { camelCase: true }));
-// { a:
-//    { b: { c: {}, testJs: [Object] },
-//      twoWords:
-//       { path: '.../example/a/two words',
-//         stat: [Object] } },
-//   indexJs:
-//    { path: '.../example/index.js',
-//      stat:
-//       {...} } }
-
-// Promise/async-await interface
-(async () => {
-    const tree = await fsFileTree(__dirname)
-    console.log(tree)
-})()
+})();
