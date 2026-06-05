@@ -74,7 +74,7 @@ yarn add fs-file-tree
 
 
 ```js
-const fsFileTree = require("fs-file-tree");
+import fsFileTree from "fs-file-tree";
 
 // File tree looks like this:
 // .
@@ -85,8 +85,9 @@ const fsFileTree = require("fs-file-tree");
 // │   └── two\ words
 // └── index.js
 
-// The tree object looks like this:
-fsFileTree(__dirname, (err, tree) => {
+// Promise/async-await interface
+(async () => {
+    const tree = await fsFileTree("example/");
     console.log(tree);
     // { a:
     //    { b: { c: {}, 'test.js': [Object] },
@@ -97,28 +98,34 @@ fsFileTree(__dirname, (err, tree) => {
     //    { path: '.../example/index.js',
     //      stat:
     //       {...} } }
-});
-
-console.log(fsFileTree.sync(__dirname, { camelCase: true }));
-// { a:
-//    { b: { c: {}, testJs: [Object] },
-//      twoWords:
-//       { path: '.../example/a/two words',
-//         stat: [Object] } },
-//   indexJs:
-//    { path: '.../example/index.js',
-//      stat:
-//       {...} } }
-
-// Promise/async-await interface
-(async () => {
-    const tree = await fsFileTree(__dirname)
-    console.log(tree)
-})()
+})();
 ```
 
 
 
+
+
+
+
+
+
+
+
+## :memo: Documentation
+
+
+### `fsFileTree(inputPath, opts)`
+Get a directory file tree as an object.
+
+#### Params
+
+- **string** `inputPath`: The input path.
+- **object** `opts`: An object containing the following fields:
+ - `camelCase` (Boolean): Convert the file names in camelcase format (to be easily accessible using dot notation).
+ - `all` (Boolean): If `true`, it will include the hidden files/directories.
+
+#### Return
+- **Promise** A promise that resolves to the file tree object.
 
 
 
@@ -137,39 +144,6 @@ There are few ways to get help:
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
-
-
-
-
-
-
-
-## :memo: Documentation
-
-
-### `fsFileTree(inputPath, opts, cb)`
-Get a directory file tree as an object.
-
-#### Params
-
-- **String** `inputPath`: The input path.
-- **Object** `opts`: An object containing the following fields:
- - `camelCase` (Boolean): Convert the file names in camelcase format (to be easily accessible using dot notation).
- - `all` (Boolean): If `true`, it will include the hidden files/directories.
-- **Function** `cb`: The callback function.
-
-### `sync(inputPath, opts)`
-The sync version.
-
-#### Params
-
-- **String** `inputPath`: The input path.
-- **Object** `opts`: An object containing the following fields:
- - `camelCase` (Boolean): Convert the file names in camelcase format (to be easily accessible using dot notation).
- - `all` (Boolean): If `true`, it will include the hidden files/directories.
-
-#### Return
-- **Object** The directory tree.
 
 
 
@@ -218,15 +192,6 @@ Thanks! :heart:
 
 
 
-
-
-
-## :dizzy: Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
-
- - `bloggify`
- - `bloggify-cli`
- - `bloggify-flexible-router`
 
 
 
